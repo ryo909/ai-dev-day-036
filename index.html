@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Day036 — 比較レーダー</title><meta name="description" content="2つの案の違いを見やすくするためのツールです。"><style>
+.explain-card{margin:0 0 18px 0;padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.9);border:1px solid rgba(15,23,42,.08);box-shadow:0 12px 30px rgba(15,23,42,.08)}
+.intro-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:14px 0}
+.intro-block{padding:12px 14px;border-radius:14px;background:rgba(248,250,252,.9)}
+.intro-block h2{margin:0 0 6px 0;font-size:.95rem}
+.intro-block p{margin:0;line-height:1.6}
+.steps-list{margin:0;padding-left:18px;line-height:1.7}
+.intro-actions{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:14px}
+.ghost-button{appearance:none;border:1px solid rgba(15,23,42,.15);background:#fff;color:#0f172a;border-radius:999px;padding:10px 14px;font-weight:700;cursor:pointer}
+.mini-label{font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;opacity:.72}
+.empty-state{padding:14px;border-radius:12px;background:rgba(148,163,184,.12);line-height:1.7}
+.section-note{margin-top:8px;font-size:.92rem;opacity:.78}
+@media (max-width:900px){.intro-grid{grid-template-columns:1fr}}
+</style><link rel="stylesheet" href="/src/style.css"></head>
+<body><div id="app"><section class="explain-card">
+  <div class="mini-label">Day036</div>
+  <h1>比較レーダー</h1>
+  <p>2つの案の違いを見やすくするためのツールです。</p>
+  <div class="intro-grid">
+    <div class="intro-block">
+      <h2>このツールでできること</h2>
+      <p>2つの案の違いを見やすくするためのツールです。</p>
+    </div>
+    <div class="intro-block">
+      <h2>こんな時に使います</h2>
+      <p>どちらにするか迷った時に使います。</p>
+    </div>
+    <div class="intro-block">
+      <h2>使い方</h2>
+      <ol class="steps-list"><li>条件を入れる</li><li>順番を見る</li><li>そのまま決める</li></ol>
+    </div>
+  </div>
+  <div class="intro-actions">
+    <button id="sampleFillBtn" class="ghost-button">サンプルで試す</button>
+    <a href="https://github.com/ryo909/ai-dev-day-036" target="_blank" rel="noopener">GitHub</a>
+  </div>
+  <div class="section-note">2つの案を入れると、違いと決めやすいポイントが出ます。</div>
+</section><div class="dash"><section class="panel"><h2>比べたい条件</h2><label>速さ <input id="wSpeed" type="range" min="0" max="100" value="40"></label><label>品質 <input id="wQuality" type="range" min="0" max="100" value="35"></label><label>コスト <input id="wCost" type="range" min="0" max="100" value="25"></label><p class="meter" id="weightMeter"></p></section><section class="panel"><h2>候補を入れる</h2><input id="optionName" placeholder="候補名"><input id="optionSpeed" type="number" min="1" max="5" placeholder="速さ 1-5"><input id="optionQuality" type="number" min="1" max="5" placeholder="品質 1-5"><input id="optionCost" type="number" min="1" max="5" placeholder="コスト 1-5"><button id="addOptionBtn">候補を追加する</button><button id="recalcBtn">比べてみる</button><h3>ここを見ればOKです</h3><table><thead><tr><th>候補</th><th>点数</th></tr></thead><tbody id="scoreTable"><tr><td colspan="2" class="empty-state">まだ候補がありません。サンプルで試せます。</td></tr></tbody></table></section></div></div><script type="module" src="/src/main.js"></script></body></html>

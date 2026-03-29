@@ -1,0 +1,11 @@
+body{font-family:"Inter","Noto Sans JP",sans-serif;background:#0f172a;margin:0;color:#e2e8f0}
+#app{max-width:1100px;margin:0 auto;padding:24px}
+.dash{display:grid;grid-template-columns:340px 1fr;gap:16px}
+.panel{background:#111827;border:1px solid #1f2937;border-radius:14px;padding:16px}
+label{display:block;margin-top:8px}
+input,button{width:100%;padding:10px;border-radius:8px;border:1px solid #334155;background:#0b1220;color:#e2e8f0}
+button{background:#2563eb;border:0;font-weight:700;cursor:pointer}
+table{width:100%;border-collapse:collapse;margin-top:10px}
+th,td{border-bottom:1px solid #334155;padding:8px;text-align:left}
+.meter{font-size:.9rem;color:#93c5fd}
+@media (max-width:900px){.dash{grid-template-columns:1fr}}
